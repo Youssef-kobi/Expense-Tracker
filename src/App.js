@@ -7,25 +7,25 @@ const DUMMY_EXPENSES = [
 		id: 'e1',
 		title: 'toilet paper',
 		amount: 94.17,
-		date: new Date(2020, 7, 14),
+		date: new Date(2020, 2, 14),
 	},
 	{
 		id: 'e2',
 		title: 'new tv',
 		amount: 200,
-		date: new Date(2021, 4, 14),
+		date: new Date(2020, 4, 14),
 	},
 	{
 		id: 'e3',
 		title: 'Car insurance',
 		amount: 100,
-		date: new Date(2019, 7, 14),
+		date: new Date(2019, 3, 14),
 	},
 	{
 		id: 'e4',
 		title: 'New Desk',
 		amount: 400,
-		date: new Date(2020, 7, 1),
+		date: new Date(2020, 9, 1),
 	},
 ]
 const App = () => {

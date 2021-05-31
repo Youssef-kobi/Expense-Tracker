@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm'
@@ -9,13 +9,28 @@ const NewExpense = (props) => {
 			id: Math.random().toString(),
 			...entredExpenseData,
 		}
-		console.log(expenseData)
 		const expense = props
 		expense.onAddExpense(expenseData)
 	}
+
+	const [Toggle, setToggle] = useState(false)
+	const toggleHandler = () => {
+		setToggle(!Toggle)
+	}
 	return (
 		<div className='new-expense'>
-			<ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
+			{Toggle === false ? (
+				<button type='submit' onClick={toggleHandler}>
+					Add Expense
+				</button>
+			) : (
+				<div>
+					<ExpenseForm
+						onSaveExpenseData={saveExpenseDataHandler}
+						onCancel={toggleHandler}
+					/>
+				</div>
+			)}
 		</div>
 	)
 }
